@@ -1,0 +1,95 @@
+create table Sample(ID int,text varchar(200))
+insert into Sample(ID,text) values(1,'xyz')
+insert into Sample(ID,text) values(2,'xyz')
+insert into Sample(ID,text) values(3,'abc')
+insert into Sample(ID,text) values(4,'lmn')
+insert into Sample(ID,text) values(5,'pqr')
+
+select TEXT as name from Sample where TEXT='abc'
+
+select * from sample where id='6'
+
+SELECT TEXT as name from sample where TEXT='xyz'
+
+SELECT * from sample where TEXT='xyz'
+
+SELECT ID from sample where TEXT='xyz'
+
+
+
+create table empsal(ID int,empname varchar(200), empsal int)
+
+insert into empsal(ID,empname,empsal) values (1,abc,50000)
+insert into empsal(ID,empname,empsal) values (1,pqr,20000)
+insert into empsal(ID,empname,empsal) values (1,xyz,25000)
+insert into empsal(ID,empname,empsal) values (1,lmn,50000)
+
+
+select * from empsal where id in (1,2,3)
+
+select * from empsal where id not in (1,2,3)
+
+select Empname || '---'|| empsal as empandsal from empsal
+
+select * from empsal where empname is NULL
+
+select * from empsal where empsal<100000 and empsal>10000
+
+
+
+select DISTINCT* from sample
+
+ select DISTINCT TEXT from sample
+
+select * from sample order by ID (ascending)
+
+select * from sample order by ID desc (descending)
+
+select TEXT from sample group by TEXT
+
+
+
+
+select TEXT from sample group by TEXT having count(TEXT)>1  {no.of duplicates}
+
+
+
+create table sigfun(ID int, Decval decimal,INTval int)
+
+insert into sigfun(ID,Decval,INTval) values(1,111.00,3)
+insert into sigfun(ID,Decval,INTval) values(2,11.1,9)
+insert into sigfun(ID,Decval,INTval) values(3,111.23,8)
+
+select * from sigfun
+
+select Decval from sigfun
+select TRUNC(Decval,1) from sigfun
+select ROUND(Decvalue) from sigfun
+
+select CEIL(32.65) from dual
+select CEIL(32.1) from dual
+select CEIL(-32.65) from dual
+
+
+
+
+
+
+
+select CURRENT_DATE from dual;
+
+select ADD_MONTHS(CURRENT_DATE,1) from dual;
+
+select MONTHS_BETWEEN ('20-DEC-21','20-OCT-21') from dual;
+
+select sysdate from dual;
+
+select case when (MOD(4,2)=0) then 'even' else 'odd' end from dual;
+select case when (MOD(5,2)=0) then 'even' else 'odd' end from dual;
+
+
+
+
+https://github.com/Nasirud/day6.git
+
+ 
